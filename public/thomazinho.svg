@@ -1,0 +1,111 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 250" role="img" aria-label="Thomazinho">
+  <title>Thomazinho</title>
+  <style>
+    /* tchauzinho + sorrisinho a cada 6 s; parado para quem pede menos movimento */
+    #braco, #cabeca, #boca, .bochecha { transform-box: view-box; }
+    #braco { transform-origin: 60px 150px; animation: tchau 6s ease-in-out infinite; }
+    #cabeca { transform-origin: 100px 135px; animation: inclina 6s ease-in-out infinite; }
+    #boca { transform-origin: 100px 113px; animation: sorriso 6s ease-in-out infinite; }
+    .bochecha { animation: cora 6s ease-in-out infinite; }
+    @keyframes tchau {
+      0%, 40%, 100% { transform: rotate(0deg); }
+      8%  { transform: rotate(-20deg); }
+      16% { transform: rotate(8deg); }
+      24% { transform: rotate(-20deg); }
+      32% { transform: rotate(8deg); }
+    }
+    @keyframes inclina {
+      0%, 40%, 100% { transform: rotate(0deg); }
+      12%, 28% { transform: rotate(-4deg); }
+    }
+    @keyframes sorriso {
+      0%, 40%, 100% { transform: scale(1); }
+      10%, 30% { transform: scale(1.22, 1.3); }
+    }
+    @keyframes cora {
+      0%, 40%, 100% { opacity: 0.6; }
+      10%, 30% { opacity: 0.95; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      #braco, #cabeca, #boca, .bochecha { animation: none; }
+    }
+  </style>
+  <!-- sombra -->
+  <ellipse cx="100" cy="238" rx="52" ry="8" fill="#080A77" opacity="0.12"/>
+
+  <!-- pernas e sapatos -->
+  <rect x="74" y="196" width="20" height="34" rx="8" fill="#1d1f8a"/>
+  <rect x="106" y="196" width="20" height="34" rx="8" fill="#1d1f8a"/>
+  <ellipse cx="82" cy="231" rx="15" ry="7" fill="#2b2b2b"/>
+  <ellipse cx="118" cy="231" rx="15" ry="7" fill="#2b2b2b"/>
+
+  <!-- braço que acena (esquerda) -->
+  <g id="braco">
+    <path d="M60 150 Q34 136 30 104" stroke="#080A77" stroke-width="16" stroke-linecap="round" fill="none"/>
+    <circle cx="30" cy="98" r="11" fill="#F3C8A8"/>
+  </g>
+
+  <!-- corpo: paletó -->
+  <rect x="54" y="136" width="92" height="72" rx="26" fill="#080A77"/>
+  <!-- camisa e gravata -->
+  <path d="M84 137 L100 168 L116 137 Z" fill="#ffffff"/>
+  <path d="M96 146 L104 146 L106 152 L100 178 L94 152 Z" fill="#8C8C8C"/>
+  <path d="M84 137 L100 168 L92 140 Z" fill="#1d1f8a"/>
+  <path d="M116 137 L100 168 L108 140 Z" fill="#1d1f8a"/>
+  <!-- bolso com o "t" da logo -->
+  <rect x="62" y="166" width="22" height="20" rx="4" fill="#ffffff"/>
+  <text x="73" y="182" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-style="italic"
+        font-size="18" fill="#080A77" text-anchor="middle">t</text>
+
+  <!-- braço que segura a calculadora (direita) -->
+  <path d="M144 152 Q160 162 156 180" stroke="#080A77" stroke-width="16" stroke-linecap="round" fill="none"/>
+  <g transform="rotate(-10 150 176)">
+    <rect x="134" y="160" width="34" height="42" rx="6" fill="#5b5b66"/>
+    <rect x="139" y="165" width="24" height="9" rx="2" fill="#c9f2d4"/>
+    <g fill="#e7e7ee">
+      <rect x="139" y="178" width="6" height="5" rx="1"/><rect x="148" y="178" width="6" height="5" rx="1"/><rect x="157" y="178" width="6" height="5" rx="1"/>
+      <rect x="139" y="186" width="6" height="5" rx="1"/><rect x="148" y="186" width="6" height="5" rx="1"/><rect x="157" y="186" width="6" height="5" rx="1"/>
+      <rect x="139" y="194" width="6" height="5" rx="1"/><rect x="148" y="194" width="6" height="5" rx="1"/>
+    </g>
+    <rect x="157" y="194" width="6" height="5" rx="1" fill="#f4a261"/>
+  </g>
+  <circle cx="154" cy="184" r="10" fill="#F3C8A8"/>
+
+  <!-- pescoço e cabeça (rosto redondo) -->
+  <rect x="90" y="122" width="20" height="18" rx="6" fill="#e9b996"/>
+  <g id="cabeca">
+  <ellipse cx="51" cy="84" rx="8" ry="12" fill="#e9b996"/>
+  <ellipse cx="149" cy="84" rx="8" ry="12" fill="#e9b996"/>
+  <ellipse cx="100" cy="82" rx="52" ry="50" fill="#F3C8A8"/>
+
+  <!-- cabelo escuro curto, um pouco bagunçado -->
+  <path d="M50 76 Q46 36 84 30 Q96 22 112 28 Q148 32 150 74 Q144 56 128 50 Q120 58 104 52 Q92 60 78 52 Q62 56 50 76 Z" fill="#3a2a20"/>
+  <path d="M70 38 L74 26 L82 34 L90 22 L98 32 L108 22 L114 32 L124 26 L128 38 Z" fill="#3a2a20"/>
+
+  <!-- barba cheia -->
+  <path d="M50 86 Q50 140 100 142 Q150 140 150 86 Q146 104 136 110 Q124 100 100 102 Q76 100 64 110 Q54 104 50 86 Z" fill="#4a3426"/>
+  <path d="M64 110 Q76 100 100 102 Q124 100 136 110" stroke="#5c4232" stroke-width="3" fill="none"/>
+  <!-- textura da barba -->
+  <g stroke="#6b4e3b" stroke-width="1.6" stroke-linecap="round" opacity="0.7">
+    <path d="M62 120 l3 4"/><path d="M74 128 l2 4"/><path d="M88 133 l1 4"/><path d="M112 133 l-1 4"/>
+    <path d="M126 128 l-2 4"/><path d="M138 120 l-3 4"/><path d="M57 106 l3 3"/><path d="M143 106 l-3 3"/>
+  </g>
+
+  <!-- sobrancelhas grossas -->
+  <path d="M68 70 Q80 63 92 69" stroke="#3a2a20" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+  <path d="M108 69 Q120 63 132 70" stroke="#3a2a20" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+  <!-- olhos sorridentes (meio fechados) -->
+  <path d="M71 84 Q80 77 89 84" stroke="#1b1b2f" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <path d="M111 84 Q120 77 129 84" stroke="#1b1b2f" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <!-- nariz e bochechas -->
+  <path d="M98 88 Q93 100 100 102 Q105 102 104 98" stroke="#d49a78" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <ellipse class="bochecha" cx="66" cy="96" rx="8" ry="5" fill="#ee9e94" opacity="0.6"/>
+  <ellipse class="bochecha" cx="134" cy="96" rx="8" ry="5" fill="#ee9e94" opacity="0.6"/>
+  <!-- sorriso no meio da barba -->
+  <g id="boca">
+    <path d="M82 110 Q100 134 118 110 Q100 116 82 110 Z" fill="#7a2e28"/>
+    <path d="M86 112 Q100 116 114 112 L112 116 Q100 119 88 116 Z" fill="#ffffff"/>
+    <path d="M82 110 Q100 134 118 110" stroke="#e7a088" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  </g>
+  </g>
+</svg>
